@@ -1,0 +1,1 @@
+const cache='fragtskib-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(cache).then(c=>c.addAll(['./','./index.html','./manifest.json','./icon.png']))));self.addEventListener('fetch',e=>{if(e.request.method==='GET')e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});
